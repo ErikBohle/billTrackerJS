@@ -1,0 +1,170 @@
+//normalize and resets
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+$fonts: "Roboto", Arial, Courier;
+//colors
+
+$grayColor: #c0c0c0;
+$primaryColor: #000;
+$secondaryColor: #fff;
+$bgBlue: #385c75;
+$bgBlueTwo: #99b4cc;
+$bgWhite: #f0f0f0;
+$bgRed: #ff5f57;
+$bgRedTwo: #ff9e99;
+
+//
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+
+  opacity: 1;
+}
+
+//removing arrows on number input
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  width: 100%;
+  background-color: $bgWhite;
+}
+//top talf
+.controls {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  font-size: 20px;
+  margin-bottom: 1em;
+  h1 {
+    position: absolute;
+    font-size: 14ch;
+    font-family: Arial, $fonts;
+  }
+}
+//inputs
+.add {
+  align-self: flex-end;
+  margin: 1em 2em;
+  display: flex;
+  border: 1px black solid;
+  border-radius: 2px;
+
+  input {
+    background-color: $bgBlue;
+    border: 1px solid $primaryColor;
+    padding: 8px 10px;
+    color: $secondaryColor;
+    font-family: $fonts;
+  }
+}
+.subtract {
+  display: flex;
+  margin: 1em 2em;
+  align-self: flex-end;
+  border: 1px black solid;
+  border-radius: 2px;
+  input {
+    border: 1px solid $primaryColor;
+    padding: 8px 10px;
+    background-color: $bgRed;
+    color: $primaryColor;
+    font-family: $fonts;
+    &:active {
+      outline: none;
+    }
+  }
+}
+// buttons
+.btnAdd {
+  padding: 8px 10px;
+  background-color: $bgBlueTwo;
+
+  border: 1px solid $primaryColor;
+  cursor: pointer;
+}
+.btnSubtract {
+  border: 1px solid $primaryColor;
+  cursor: pointer;
+  padding: 8px 10px;
+  background-color: $bgRedTwo;
+}
+
+//bottom half
+
+
+.results{
+  display: flex;
+  
+  background-color: $bgBlueTwo;
+  height: 100%;
+  flex-direction: column;
+  
+}
+hr{
+  margin: 0;
+}
+.total{
+  background-color: $bgBlue;
+  padding: 0.5em;
+  height: 10vh;
+  width: 37.5vw;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  align-self: center;
+  h2{
+    align-self: center;
+    margin-right: 10px;
+    font-size: 5ch;
+    letter-spacing: 2px;
+  }
+  span{
+    align-self: center;
+    color: $bgWhite;
+    font-size: 5ch;
+  }
+}
+
+.allinputs{
+  align-self: center;
+  width: 40vw;
+  background-color: black;
+  border: 5px solid $primaryColor;
+  height: auto;
+  p{
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+
+  }
+}
+
+.bgRed{
+  background-color: $bgRed;
+}
+
+.bgBlue{
+  background-color: $bgBlue;
+}

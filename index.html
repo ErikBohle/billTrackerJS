@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Bill Tracker</title>
+  <!-- normalize -->
+  <link rel="stylesheet" href="/ErikBohle.github.io/webdev-projects/styles/normalize.css">
+  <link rel="stylesheet" href="app/styles/style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+</head>
+
+<!-- 
+  Todo:
+  
+  Setup bottom half with a total, and rolling inputs with corresponding colors.
+  style backgrounds.
+-->
+<body>
+  <div class="controls">
+    <h1>Bill Tracker</h1>
+    
+    <div class="subtract">
+      <input placeholder="Enter a number" id="subtract" type="number" name=""  ><button  type="submit" id="btnSubtract"><i  class="fas fa-minus"></i></button>
+    </div>    
+    <div class="add">
+      <input placeholder="Enter a number" id="add" type="number" name="" value="0"><button type="submit" id="btnAdd"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+  <hr>
+  <div class="results">
+    <div class="total">
+      <h2>Your balance is:</h2><span id="totalText">0</span>
+    </div>
+    <div class="allinputs">
+      <p class="bgBlue"></p>
+      <p class="bgRed"></p>
+      <p class="bgBlue"></p>
+      <p class="bgRed"></p>
+      <p class="bgBlue"></p>
+      <p class="bgRed"></p>
+      <p class="bgBlue"></p>
+      <p class="bgRed"></p>
+      <p class="bgBlue"></p>
+      <p class="bgRed"></p>
+      <p class="bgBlue"></p>
+      <p class="bgRed"></p>
+      <p class="bgBlue"></p>
+    </div>
+  </div>
+  <script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			  crossorigin="anonymous"></script>
+  <script src="app/scripts/app.js"></script>
+</body>
+</html>
