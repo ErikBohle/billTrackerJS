@@ -7,6 +7,7 @@ todo:
 -list out array items to the history section and display red or blue if negative or positive.
 -make functions that takes the
 -Store everything in local storage?
+-reset button
 
 */
 
@@ -22,14 +23,31 @@ $("#btnSubtract").click(function () {
   arrayOfNumbers = myarray.map(Number);
   total = sumArray(arrayOfNumbers);
   $("#totalText").text(total);
+  $(".allinputs").empty(); 
+  //Run through array to add items
+  for (i = 0; i< arrayOfNumbers.length; i++){
+    $("<p>"+myarray[i]+"</p>").appendTo(".allinputs");
+  }
 });
 //income
 $("#btnAdd").click(function () {
   myarray.push($("#add").val());
+  test= ($("#add").val());
   arrayOfNumbers = myarray.map(Number);
   total = sumArray(arrayOfNumbers);
   $("#totalText").text(total);
+  //empty div so we can use the append method.
+  $(".allinputs").empty(); 
+  //Run through array to add items
+  for (i = 0; i< arrayOfNumbers.length; i++){
+    $("<p>"+myarray[i]+"</p>").appendTo(".allinputs");
+  }
 });
+
+
+
+// if else statement to see if index is positive or negative
+//then append to dom and add class with variable.classList.add("bgRed")
 
 //sum for total
 var sumArray = function() {
