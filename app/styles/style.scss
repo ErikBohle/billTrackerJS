@@ -3,6 +3,7 @@
 //normalize and resets
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 *,
 *:before,
@@ -80,6 +81,12 @@ aside {
     font-family: Arial, $fonts;
     margin-top: 0.5ch;
   }
+  #portfolio{
+    color: $primaryColor;
+    text-decoration: none;
+    position: absolute;
+    
+  }
 }
 //inputs
 .add {
@@ -128,6 +135,8 @@ aside {
   padding: 8px 10px;
   background-color: $bgRedTwo;
 }
+
+
 
 //bottom half
 
@@ -211,6 +220,9 @@ hr {
     border: none;
     max-width: 100%;
     font-size: 10px;
+  }
+  #portfolio{
+    margin-top: 5em;
   }
   .controls {
     width: 100vw;
