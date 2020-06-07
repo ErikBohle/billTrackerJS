@@ -1,3 +1,5 @@
+// Mobile styles start at line 206
+
 //normalize and resets
 html {
   box-sizing: border-box;
@@ -47,19 +49,36 @@ input[type="number"] {
 
 body {
   width: 100%;
-  background-color: $bgWhite;
+  background-color: $bgBlueTwo;
+}
+aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18%;
+  background-color: $secondaryColor;
+  height: auto;
+  li {
+    padding: 1em;
+    font-size: 3ch;
+  }
+  h1 {
+    padding: 1em;
+  }
 }
 //top talf
 .controls {
   display: flex;
   justify-content: center;
-  height: 60vh;
+  height: 40vh;
   font-size: 20px;
   margin-bottom: 1em;
+  background-color: $grayColor;
   h1 {
     position: absolute;
     font-size: 14ch;
     font-family: Arial, $fonts;
+    margin-top: 0.5ch;
   }
 }
 //inputs
@@ -112,19 +131,17 @@ body {
 
 //bottom half
 
-
-.results{
+.results {
   display: flex;
-  
+  color: $secondaryColor;
   background-color: $bgBlueTwo;
   height: 100%;
   flex-direction: column;
-  
 }
-hr{
+hr {
   margin: 0;
 }
-.total{
+.total {
   background-color: $bgBlue;
   padding: 0.5em;
   height: 10vh;
@@ -134,37 +151,141 @@ hr{
   justify-content: center;
   border-radius: 25px;
   align-self: center;
-  h2{
+  h2 {
     align-self: center;
     margin-right: 10px;
     font-size: 5ch;
     letter-spacing: 2px;
   }
-  span{
+  span {
     align-self: center;
     color: $bgWhite;
     font-size: 5ch;
   }
 }
 
-.allinputs{
+.allinputs {
   align-self: center;
   width: 40vw;
   background-color: black;
   border: 5px solid $primaryColor;
   height: auto;
-  p{
-    text-align: center;
-    padding: 1em;
-    margin: 0;
-    color: $grayColor;
+
+  div {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    button {
+      border: none;
+      position: absolute;
+      padding: 1em;
+      right: 0;
+    }
+    p {
+      margin: 1px;
+      padding: 1em;
+      width: auto;
+    }
   }
 }
 
-.bgRed{
+.bgRed {
   background-color: $bgRed;
+  color: $primaryColor;
 }
 
-.bgBlue{
+.bgBlue {
   background-color: $bgBlue;
+  color: $secondaryColor;
+}
+
+// Mobile styles
+//small
+@media (max-width: 640px) {
+  aside {
+    display: none;
+  }
+  html {
+    border: none;
+    max-width: 100%;
+    font-size: 10px;
+  }
+  .controls {
+    width: 100vw;
+    h1 {
+      font-size: 5ch;
+    }
+    div {
+      margin: 1em;
+      width: 34vw;
+      border: none;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .results {
+    width: 100vw;
+    font-size: 18px;
+    .total {
+      width: 100vw;
+      font-size: 10px;
+    }
+  }
+  .allinputs {
+    width: 100vw;
+    div {
+      width: 100%;
+      button{}
+      p {
+        width: 40vw;
+      }
+    }
+  }
+}
+//pads 
+@media (min-width:700px) and ( max-width: 900px) {
+  aside {
+    display: none;
+  }
+  html {
+    border: none;
+    max-width: 100%;
+    font-size: 10px;
+  }
+  .controls {
+    width: 100vw;
+    height: 30vh;
+    h1 {
+      font-size: 10ch;
+    }
+    div {
+      margin: 1em;
+      width: 34vw;
+      border: none;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .results {
+    width: 100vw;
+    font-size: 18px;
+    .total {
+      width: 100vw;
+      font-size: 10px;
+    }
+  }
+  .allinputs {
+    width: 100vw;
+    div {
+      width: 100%;
+      button{}
+      p {
+        width: 40vw;
+      }
+    }
+  }
 }
