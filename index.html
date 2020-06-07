@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Bill Tracker</title>
+  <title>JS Budget Tracker</title>
   <!-- normalize -->
   <link rel="stylesheet" href="/ErikBohle.github.io/webdev-projects/styles/normalize.css">
   <link rel="stylesheet" href="app/styles/style.css">
@@ -13,24 +13,33 @@
 
 <!-- 
   Todo:
-  
-  Setup bottom half with a total, and rolling inputs with corresponding colors.
-  style backgrounds.
+ see app.js
 -->
 <body>
+  <aside>
+    <h1>Enter some numbers and submit with the buttons to use</h1>
+    <hr>
+    <li>Thoughts and things to improve:</li>
+    <hr>
+    <li>I chose to use two input fields instead of one, so i can show the use of form validation. Even though a single field would be easier to make</li>
+    <hr>
+    <li>No unit testing have been done.</li>
+    <hr>
+
+  </aside>
   <div class="controls">
-    <h1>Bill Tracker</h1>
+    <h1>Budget Tracker</h1>
     
     <div class="subtract">
-      <input placeholder="Enter a number" id="subtract" type="number" name=""  ><button  type="submit" id="btnSubtract"><i  class="fas fa-minus"></i></button>
+      <input placeholder="Enter a number" id="subtract" type="number" name="" pattern="[0-9]+"  ><button  type="submit" id="btnSubtract"><i  class="fas fa-minus"></i></button>
     </div>    
     <div class="add">
       <input placeholder="Enter a number" id="add" type="number" name="" value="0"><button type="submit" id="btnAdd"><i class="fas fa-plus"></i></button>
     </div>
   </div>
-  <hr>
+
   <div class="results">
-    <div class="total">
+    <div id="total" class="total">
       <h2>Your balance is:</h2><span id="totalText">0</span>
     </div>
     <div class="allinputs">
