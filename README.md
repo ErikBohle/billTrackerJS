@@ -7,4 +7,5 @@ It also displays the history of inputs and shows different color for whether or 
 
 You can remove individual inputs and it will update the total.
 
-In this project i focused on the javascript part and not style, you can view the script athttps://github.com/ErikBohle/billTrackerJS/blob/master/app/scripts/app.js
+In this project i focused on the javascript part and not style, you can view the script at
+https://github.com/ErikBohle/billTrackerJS/blob/master/app/scripts/app.js
