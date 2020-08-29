@@ -2,12 +2,7 @@
 Budget app
 
 todo:
--validate inputs with regex -> before put into array?
-- get sum of array and display total in  #totalText
- *only show 2 decimals.
--Store everything in local storage?
 -reset button
-- use DRY to reuse code
 */
 
 // declarations
